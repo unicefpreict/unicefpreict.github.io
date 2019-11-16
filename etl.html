@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<!--
+	Theory by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>ETL - Bootcamp Final Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+		<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">Home</a>
+					<nav id="nav">
+						<a href="index.html">Home</a>
+						<a href="data.html">Data</a>
+						<a href="etl.html">ETL</a>
+						<a href="ml.html">Machine Learning</a>
+						<a href="viz.html">Visualization 1</a>
+						<a href="viz2.html">Visualization 2</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Three -->
+			<section id="three" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h2>The ETL Process</h2>
+						<p>by Joseph Kunz </p>
+					</header>
+					<div class="flex flex-2">
+						<article>
+							<header>
+								<h3>1. Separate excel worksheets (vaccines) to different CSVs</h3>
+							</header>
+									<p style="color: #5385c1">Our original dataset was one CSV and an Excel workbook with fourteen different worksheets
+											for each of the vaccines we analyzed. We separated each of these worksheets into multiple
+											CSV's in order to extract the data more easily.</p>
+							<div class="image fit">
+								<img src="images/etl/etl6edit.png" alt="Pic 01" />
+							</div>
+					
+						</article>
+						<article>
+							<header>
+								<h3>2. Create country specific vaccine dataframes</h3>
+							</header>
+								<p style="color: #5385c1">Created 195 dataframe, one for each country. This was a lot of leg work, but we need to do this in order to add the global region for each country.
+									</p>
+							<div class="image fit">
+								<img src="images/etl/etl1.png" alt="Pic 02" />
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+
+		<!-- Two -->
+		<section id="two" class="wrapper style1 special">
+			<div class="inner">
+				<div class="flex flex-2">
+						<article>
+							<header>
+								<h3>3. Seperate countries into their own CSVs and dataframes</h3>
+							</header>
+									<p style="color: white">Redundant work, but originally we were going to use 195 CSV's in order to account for population differences between countries within the same region.</p>	
+							<div class="image fit">
+								<img src="images/etl/etl4edit.png" alt="Pic 02" />
+							</div>
+						</article>
+					<article>
+						<header>
+								<h3>4. Add global region column to each country's dataframe</h3>
+							</header>
+								<p style="color: white">Added Global region Column to each countries dataframe in order to distinguish our data on a global basis</p>
+							<div class="image fit">
+								<img src="images/etl/etl5edit.png" alt="Pic 01" />
+							</div>
+					</article>
+				</div>
+		</section>
+
+				<!-- Three -->
+				<section id="three" class="wrapper">
+					<div class="inner">
+						<div class="flex flex-2">
+							<article>
+								<header>
+									<h3>5. Concatenate vaccines CSVs into one CSV</h3>
+								</header>
+									<p style="color: #5385c1">After cleaning we concatenated our dataframes into one large dataframe and exported it to one large CSV.</p>
+								<div class="image fit">
+									<img src="images/etl/etl2.png" alt="Pic 01" />
+								</div>
+							</article>
+							<article>
+								<header>
+									<h3>6. Drop NaN data from dataframe</h3>
+								</header>
+									<p style="color: #5385c1">Created Nine Global regional CSV’s each containing all countries within that region, and the all fourteen vaccinations.</p>
+								<div class="image fit">
+									<img src="images/etl/etl3edit.png" alt="Pic 02" />
+								</div>
+							</article>
+						</div>
+					</div>
+				</section>
+
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<div class="flex">
+					<div class="copyright">
+						Design: <a href="https://templated.co">TEMPLATED</a>.
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
